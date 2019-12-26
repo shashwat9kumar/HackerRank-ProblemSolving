@@ -75,3 +75,39 @@ Only the second orange falls within the region between  and , so we print  as ou
 
 
 
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int s,t,a,b,m,n;
+    cin>>s>>t;
+    cin>>a>>b;
+    cin>>m>>n;
+    int apple[m];
+    int orange[n];
+    int ca=0,cb=0;
+    for(int i=0;i<m;i++)
+    {
+        cin>>apple[i];
+        apple[i]+=a;
+        if(apple[i]>= s && apple[i]<=t)
+        {
+            ca++;
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        cin>>orange[i];
+        orange[i]+=b;
+        if(orange[i]>= s && orange[i]<= t)
+        {
+            cb++;
+        }
+    }
+    cout<<ca<<endl;
+    cout<<cb<<endl;
+    return 0;
+}
+
