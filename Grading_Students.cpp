@@ -61,3 +61,43 @@ Student  received a grade below , so the grade will not be modified and the stud
 
 
 
+
+
+
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        if(arr[i]<38)
+        {
+            cout<<arr[i]<<endl;
+        }
+        else
+        {
+            if((arr[i]+1)%5 == 0)
+            {
+                cout<<(arr[i]+1)<<endl;
+            }
+            else if((arr[i]+2)%5 == 0)
+            {
+                cout<<(arr[i]+2)<<endl;
+            }
+            else 
+            {
+                cout<<arr[i]<<endl;
+            }
+        }
+    }
+
+    return 0;
+}
