@@ -1,3 +1,5 @@
+/*
+
 John Watson knows of an operation called a right circular rotation on an array of integers. One rotation operation moves the last array element to the first position and shifts all remaining elements right one. To test Sherlock's abilities, Watson provides Sherlock with an array of integers. Sherlock is to perform the rotation operation a number of times then determine the value of the element at a given position.
 
 For each array, perform a number of right circular rotations and return the value of the element at a given index.
@@ -51,3 +53,43 @@ Let's refer to the array's final state as array . For each query, we just have t
 , .
 , .
 , .
+
+
+*/
+
+
+
+
+
+
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int N = in.nextInt();
+    int K = in.nextInt();
+    int Q = in.nextInt();
+    int rot = K % N;
+    int[] arr = new int[N];
+    for (int i = 0; i < N; i++)
+        arr[i] = in.nextInt();
+    for (int i = 0; i < Q; i++) {
+        int idx = in.nextInt();
+        if (idx - rot >= 0)
+            System.out.println(arr[idx - rot]);
+        else
+            System.out.println(arr[idx - rot + arr.length]);
+        }
+    }
+
+}
+
