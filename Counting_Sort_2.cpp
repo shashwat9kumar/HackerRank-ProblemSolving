@@ -64,6 +64,37 @@ Once our counting array has been filled, loop from index  to the end, printing e
 
 
 
+      #include <bits/stdc++.h>
+
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the countingSort function below.
+vector<int> countingSort(vector<int> arr) 
+{
+    vector<int> intermediate;
+    for(int i=0;i<100;i++)
+    {
+        intermediate.push_back(0);
+    }
+    for(int i=0;i<arr.size();i++)
+    {
+        intermediate[arr[i]]++;
+    }
+    vector<int> sorted;
+    for(int i=0;i<100;i++)
+    {
+        if(intermediate[i]!=0)
+        {
+            for(int j=0;j<intermediate[i];j++)
+            {
+                sorted.push_back(i);
+            }
+        }
+    }
+    return sorted;
+}
 
 int main()
 {
