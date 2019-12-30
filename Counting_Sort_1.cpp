@@ -63,6 +63,27 @@ Each of the resulting values  represents the number of times  appeared in .
 
 
 
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the countingSort function below.
+vector<int> countingSort(vector<int> arr) {
+    vector<int> sorted;
+    int n=arr.size();
+    for(int i=0;i<100;i++)
+    {
+        sorted.push_back(0);
+    }
+    for(int i=0;i<n;i++)
+    {
+        sorted[arr[i]]++;
+    }
+    return sorted;
+}
+
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
