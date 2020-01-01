@@ -64,6 +64,38 @@ Here, the minimum difference will be 1. Valid pairs are (2, 3), (3, 4), and (4, 
 
 
 
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the closestNumbers function below.
+vector<int> closestNumbers(vector<int> arr) {
+    int n=arr.size();
+    sort(arr.begin(),arr.end());
+    int mindiff=arr[1]-arr[0];
+    for(int i=0;i<n-1;i++)
+    {
+        int find=arr[i+1]-arr[i];
+        if(find<mindiff)
+        mindiff=find;
+    }
+    vector<int> value;
+    for(int i=0;i<n-1;i++)
+    {
+        int diff=arr[i+1]-arr[i];
+        if(diff==mindiff)
+        {
+            value.push_back(arr[i]);
+            value.push_back(arr[i+1]);
+        }
+    }
+    return value;
+}
+
+
+
 
 
 int main()
