@@ -64,3 +64,6 @@ Here, the minimum difference will be 1. Valid pairs are (2, 3), (3, 4), and (4, 
 
 
 
+
+
+
