@@ -95,9 +95,6 @@ vector<int> closestNumbers(vector<int> arr) {
 }
 
 
-
-
-
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
