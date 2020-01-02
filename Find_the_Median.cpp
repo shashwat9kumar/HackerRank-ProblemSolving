@@ -46,7 +46,27 @@ The sorted . It's middle element is at .
 
 
 
+#include <bits/stdc++.h>
 
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the findMedian function below.
+int findMedian(vector<int> arr) {
+    int n=arr.size();
+    sort(arr.begin(),arr.end());
+    if(n%2==0)
+    {
+        int med=arr[n/2]+arr[n/2 - 1];
+        med=med/2.0;
+        return med;
+    }
+    else
+    {
+        return arr[n/2];
+    }
+}
 
 
 int main()
