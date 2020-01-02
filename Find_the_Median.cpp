@@ -45,7 +45,6 @@ The sorted . It's middle element is at .
 
 
 
-
 #include <bits/stdc++.h>
 
 using namespace std;
