@@ -2,6 +2,19 @@
 
 
 
+Function Description
+
+Complete the divisibleSumPairs function in the editor below. It should return the integer count of pairs meeting the criteria.
+
+divisibleSumPairs has the following parameter(s):
+
+n: the integer length of array 
+ar: an array of integers
+k: the integer to divide the pair sum by
+Input Format
+
+The first line contains  space-separated integers,  and .
+The second line contains  space-separated integers describing the values of .
 Constraints
 
 Output Format
