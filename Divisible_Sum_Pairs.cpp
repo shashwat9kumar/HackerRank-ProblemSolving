@@ -40,6 +40,7 @@ Here are the  valid pairs when :
 
 */
 
+
 #include <bits/stdc++.h>
 
 using namespace std;
