@@ -20,6 +20,15 @@ Complete the breakingRecords function in the editor below. It must return an int
 breakingRecords has the following parameter(s):
 
 scores: an array of integers
+Input Format
+
+The first line contains an integer , the number of games.
+The second line contains  space-separated integers describing the respective values of .
+
+Constraints
+
+Output Format
+
 
 
 
