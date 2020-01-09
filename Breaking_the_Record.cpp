@@ -68,3 +68,28 @@ She broke her best record four times (after games , , , and ) and her worst reco
 using namespace std;
 
 vector<string> split_string(string);
+
+// Complete the breakingRecords function below.
+vector<int> breakingRecords(vector<int> scores) {
+    int n=scores.size();
+    int hig=scores[0];
+    int low=scores[0];
+    int lc=0,hc=0;
+    for(int i=1;i<n;i++)
+    {
+        if(scores[i]<low)
+        {
+            lc++;
+            low=scores[i];
+        }
+        if(scores[i]>hig)
+        {
+            hc++;
+            hig=scores[i];
+        }
+    }
+    vector<int> arr;
+    arr.push_back(hc);
+    arr.push_back(lc);
+    return arr;
+}
