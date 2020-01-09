@@ -93,3 +93,42 @@ vector<int> breakingRecords(vector<int> scores) {
     arr.push_back(lc);
     return arr;
 }
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    string scores_temp_temp;
+    getline(cin, scores_temp_temp);
+
+    vector<string> scores_temp = split_string(scores_temp_temp);
+
+    vector<int> scores(n);
+
+    for (int i = 0; i < n; i++) {
+        int scores_item = stoi(scores_temp[i]);
+
+        scores[i] = scores_item;
+    }
+
+    vector<int> result = breakingRecords(scores);
+
+    for (int i = 0; i < result.size(); i++) {
+        fout << result[i];
+
+        if (i != result.size() - 1) {
+            fout << " ";
+        }
+    }
+
+    fout << "\n";
+
+    fout.close();
+
+    return 0;
+}
+
