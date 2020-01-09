@@ -15,7 +15,11 @@ Game  Score  Minimum  Maximum   Min Max
 Given Maria's scores for a season, find and print the number of times she breaks her records for most and least points scored during the season.
 
 Function Description
+Complete the breakingRecords function in the editor below. It must return an integer array containing the numbers of times she broke her records. Index  is for breaking most points records, and index  is for breaking least points records.
 
+breakingRecords has the following parameter(s):
+
+scores: an array of integers
 
 
 
