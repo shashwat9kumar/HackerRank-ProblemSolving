@@ -60,7 +60,7 @@ vector<string> split_string(string);
 int sockMerchant(int n, vector<int> ar) {
 
 
-    sort(ar.begin(),ar.end());
+    sort(ar.begin(),ar.end());              //predefined function ,   passing vector to it
 
     int ter=ar[0];
     int count =0;
