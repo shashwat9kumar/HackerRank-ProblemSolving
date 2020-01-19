@@ -75,12 +75,12 @@ int sockMerchant(int n, vector<int> ar) {
         }
         else
         {
-            no=no+(count/2);
+            no=no+(count/2);             // count/2 because we need pairs
             count=1;
             ter=ar[i];
         }
     }
-    no=no + (count/2);
+    no=no + (count/2);             // adding the last counted value of colours
     return no;
 
 }
