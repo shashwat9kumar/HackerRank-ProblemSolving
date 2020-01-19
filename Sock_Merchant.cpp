@@ -66,11 +66,6 @@ int sockMerchant(int n, vector<int> ar) {
     int count =0;
     int no=0;
 
-    /*for(int i=0;i<n;i++)
-    {
-        cout<<ar[i];
-        cout<<endl;
-    }*/
 
     for(int i=0;i<n;i++)
     {
