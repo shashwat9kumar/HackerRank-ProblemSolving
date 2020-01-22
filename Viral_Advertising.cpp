@@ -58,3 +58,47 @@ strange ad.png
 
 
 
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the viralAdvertising function below.
+int viralAdvertising(int n) {
+
+
+    int shares=5;
+    int likes=2;
+    int cumulative=2;
+
+    for(int i=2;i<=n;i++)
+    {
+        int reach=shares/2;
+        reach = reach * 3;
+        shares=reach;
+        likes=shares/2;
+        cumulative+=likes;
+    }
+    return cumulative;
+
+
+}
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    int result = viralAdvertising(n);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
+
