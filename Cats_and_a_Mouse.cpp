@@ -1,4 +1,7 @@
 
+/*
+
+
 Two cats and a mouse are at various positions on a line. You will be given their starting positions. Your task is to determine which cat will reach the mouse first, assuming the mouse doesn't move and the cats travel at equal speed. If the cats arrive at the same time, the mouse will be allowed to move and it will escape while they fight.
 
 You are given  queries in the form of , , and  representing the respective positions for cats  and , and for mouse . Complete the function  to return the appropriate answer to each query, which will be printed on a new line.
@@ -46,3 +49,81 @@ Cat  will catch the mouse first, so we print Cat B on a new line.
 Query 1: In this query, cats  and  reach mouse  at the exact same time: image
 
 Because the mouse escapes, we print Mouse C on a new line.
+
+
+
+*/
+
+
+
+
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the catAndMouse function below.
+    static String catAndMouse(int x, int y, int z) {
+
+
+        String str="";
+        int dist1=x-z;
+        if(dist1<0)
+        {
+            dist1=-dist1;
+        }
+        int dist2=y-z;
+        if(dist2<0)
+        {
+            dist2=-dist2;
+        }
+        if(dist1<dist2)
+        {
+            str="Cat A";
+        }
+        else if(dist2<dist1)
+        {
+            str="Cat B";
+        }
+        else
+        {
+            str="Mouse C";
+        }
+        return str;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int q = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int qItr = 0; qItr < q; qItr++) {
+            String[] xyz = scanner.nextLine().split(" ");
+
+            int x = Integer.parseInt(xyz[0]);
+
+            int y = Integer.parseInt(xyz[1]);
+
+            int z = Integer.parseInt(xyz[2]);
+
+            String result = catAndMouse(x, y, z);
+
+            bufferedWriter.write(result);
+            bufferedWriter.newLine();
+        }
+
+        bufferedWriter.close();
+
+        scanner.close();
+    }
+}
